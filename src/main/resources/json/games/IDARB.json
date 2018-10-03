@@ -1,0 +1,10 @@
+[{
+  "name": "#IDARB",
+  "gameModes": [
+    {
+      "name":"#IDARB",
+      "team": true,
+      "ffa": false
+    }
+  ]
+}]

@@ -1,0 +1,10 @@
+[{
+  "name": "Speed Runners",
+  "gameModes": [
+    {
+      "name":"Speed Runners",
+      "team": false,
+      "ffa": true
+    }
+  ]
+}]

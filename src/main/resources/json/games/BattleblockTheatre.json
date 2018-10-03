@@ -1,0 +1,50 @@
+[{
+  "name": "Battle Block Theatre",
+  "gameModes": [
+    {
+      "name":"Soul Snatcher",
+      "team": true,
+      "ffa": true
+    },
+    {
+      "name":"Muckle",
+      "team": true,
+      "ffa": true
+    },
+    {
+      "name":"Challenge",
+      "team": true,
+      "ffa": true
+    },
+    {
+      "name":"King of the Hill",
+      "team": true,
+      "ffa": true
+    },
+    {
+      "name":"Color the World",
+      "team": true,
+      "ffa": true
+    },
+    {
+      "name":"Grab the Gold",
+      "team": true,
+      "ffa": true
+    },
+    {
+      "name":"Ball Game",
+      "team": true,
+      "ffa": true
+    },
+    {
+      "name":"Capture the Horse",
+      "team": true,
+      "ffa": true
+    },
+    {
+      "name":"Grab Bag",
+      "team": true,
+      "ffa": true
+    }
+  ]
+}]

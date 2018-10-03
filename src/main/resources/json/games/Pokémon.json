@@ -1,0 +1,16 @@
+[{
+  "name": "Pokémon Generation 7",
+  "gameModes": [
+    {
+      "name":"Ubers",
+      "team": false,
+      "ffa": true
+    },
+    {
+      "name":"Over Used",
+      "team": false,
+      "ffa": true
+    }
+    //todo finish the data
+  ]
+}]

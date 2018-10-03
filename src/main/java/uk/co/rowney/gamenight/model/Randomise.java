@@ -1,38 +1,27 @@
 package uk.co.rowney.gamenight.model;
 
-import com.google.common.reflect.TypeToken;
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
 import uk.co.rowney.gamenight.objects.Game;
+import uk.co.rowney.gamenight.objects.Series;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.lang.reflect.Type;
 import java.util.List;
-import java.util.Random;
 
 public class Randomise {
-    public String randomGame() throws FileNotFoundException {
-        List<Game> gameList = getGameList();
-        Game game = getGameFromList(gameList);
 
-        return game.getName();
+    private JsonParser jsonParser = new JsonParser();
+
+    public Series randomSeries() throws FileNotFoundException {
+        List<Series> seriesList = jsonParser.getSeriesList();
+        return seriesList.get(getRandomForList(seriesList.size()));
     }
 
-    private Game getGameFromList(List<Game> gameList) {
-        int randomNumber =  (int) (Math.random() * gameList.size());
-        return  gameList.get(randomNumber);
-
+    private int getRandomForList(int listLength) {
+        return (int) (Math.random() * listLength);
     }
 
-    private List<Game> getGameList() throws FileNotFoundException {
-
-        Type REVIEW_TYPE = new TypeToken<List<Game>>() {}.getType();
-        Gson gson = new Gson();
-        String filename = "C:\\Users\\Dell\\Documents\\Repo\\game-night\\src\\main\\resources\\json\\GameList.json";
-        JsonReader reader = new JsonReader(new FileReader(filename));
-        List<Game> gameList = gson.fromJson(reader, REVIEW_TYPE);
-
-        return gameList;
+    public Game randomGame() throws FileNotFoundException {
+        Series randomSeries = randomSeries();
+        List<Game> chosenGame = jsonParser.getGameList(randomSeries.getFileName());
+        return chosenGame.get(getRandomForList(chosenGame.size()));
     }
 }

@@ -3,18 +3,18 @@ package uk.co.rowney.gamenight.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import uk.co.rowney.gamenight.model.Randomise;
-import uk.co.rowney.gamenight.objects.Game;
+import uk.co.rowney.gamenight.objects.Series;
 
 import java.io.FileNotFoundException;
 
 @RestController
-public class GameRequestController {
-    @RequestMapping("/game")
+public class SeriesRequestController {
+    @RequestMapping("/series")
     public String index() throws FileNotFoundException {
 
         Randomise randomise = new Randomise();
-        Game chosenGame = randomise.randomGame();
+        Series chosenSeries = randomise.randomSeries();
 
-        return "Random game selected: " + chosenGame.getName();
+        return "Random series selected: " + chosenSeries.getName();
     }
 }

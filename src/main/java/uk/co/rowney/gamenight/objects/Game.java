@@ -1,27 +1,27 @@
 package uk.co.rowney.gamenight.objects;
 
+import java.util.List;
+
 public class Game {
 
-    private int id;
     private String name;
+    private List<GameModes> gameModes;
 
-    //getters
-
-    public int getId() {
-        return id;
-    }
-
+    //Getters
     public String getName() {
         return name;
     }
 
-    //setters
-
-    public void setId(int id) {
-        this.id = id;
+    public List<GameModes> getGameModes() {
+        return gameModes;
     }
 
+    //Setters
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setGameModes(List<GameModes> gameModes) {
+        this.gameModes = gameModes;
     }
 }

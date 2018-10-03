@@ -1,0 +1,10 @@
+[{
+  "name": "Doom",
+  "gameModes": [
+    {
+      "name":"Death Match",
+      "team": false,
+      "ffa": true
+    }
+  ]
+}]

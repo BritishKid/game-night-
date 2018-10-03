@@ -1,0 +1,37 @@
+[{
+  "name": "Worms Golf",
+  "gameModes": [
+    {
+      "name":"Golf",
+      "team": false,
+      "ffa": true
+    }
+  ]},
+  {
+  "name": "Worms Armagedoon",
+  "gameModes": [
+    {
+      "name":"Battle",
+      "team": false,
+      "ffa": true
+    }
+  ]},
+  {
+  "name": "Worms Ultimate Mayhem",
+  "gameModes": [
+    {
+      "name":"Battle",
+      "team": false,
+      "ffa": true
+    }
+  ]},
+  {
+  "name": "Worms Battleground",
+  "gameModes": [
+    {
+      "name":"Battle",
+      "team": false,
+      "ffa": true
+    }
+  ]}
+]

@@ -1,0 +1,10 @@
+[{
+  "name": "Warrior Orochi Ultimate 3",
+  "gameModes": [
+    {
+      "name":"Battle",
+      "team": false,
+      "ffa": true
+    }
+  ]
+}]

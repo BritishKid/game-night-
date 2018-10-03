@@ -1,0 +1,10 @@
+[{
+  "name": "Forza",
+  "gameModes": [
+    {
+      "name":"Race",
+      "team": false,
+      "ffa": true
+    }
+  ]
+}]
