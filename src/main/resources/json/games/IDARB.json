@@ -1,5 +1,7 @@
 [{
   "name": "#IDARB",
+  "teamModes": true,
+  "ffaModes": false,
   "gameModes": [
     {
       "name":"#IDARB",

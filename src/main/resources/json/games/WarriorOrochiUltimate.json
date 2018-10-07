@@ -1,5 +1,7 @@
 [{
   "name": "Warrior Orochi Ultimate 3",
+  "teamModes": false,
+  "ffaModes": true,
   "gameModes": [
     {
       "name":"Battle",

@@ -1,5 +1,7 @@
 [{
   "name": "Doom",
+  "teamModes": false,
+  "ffaModes": true,
   "gameModes": [
     {
       "name":"Death Match",

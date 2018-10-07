@@ -1,5 +1,7 @@
 [{
   "name": "Pokémon Generation 7",
+  "teamModes": false,
+  "ffaModes": true,
   "gameModes": [
       {
         "name":"Singles",
@@ -15,6 +17,8 @@
   },
   {
     "name": "Pokémon Generation 6",
+    "teamModes": false,
+    "ffaModes": true,
     "gameModes": [
       {
         "name":"Singles",
@@ -30,6 +34,8 @@
   },
   {
     "name": "Pokémon Generation 5",
+    "teamModes": false,
+    "ffaModes": true,
     "gameModes": [
       {
         "name":"Singles",
@@ -45,6 +51,8 @@
   },
   {
     "name": "Pokémon Generation 4",
+    "teamModes": false,
+    "ffaModes": true,
     "gameModes": [
       {
         "name":"Singles",
@@ -60,6 +68,8 @@
   },
   {
     "name": "Pokémon Generation 3",
+    "teamModes": false,
+    "ffaModes": true,
     "gameModes": [
       {
         "name":"Singles",
@@ -75,6 +85,8 @@
   },
   {
     "name": "Pokémon Generation 2",
+    "teamModes": false,
+    "ffaModes": true,
     "gameModes": [
       {
         "name":"Singles",
@@ -85,6 +97,8 @@
   },
   {
     "name": "Pokémon Generation 1",
+    "teamModes": false,
+    "ffaModes": true,
     "gameModes": [
       {
         "name":"Singles",

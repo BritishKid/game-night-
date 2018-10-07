@@ -1,5 +1,7 @@
 [{
   "name": "Battle Block Theatre",
+  "teamModes": true,
+  "ffaModes": true,
   "gameModes": [
     {
       "name":"Soul Snatcher",

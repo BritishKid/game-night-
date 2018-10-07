@@ -6,6 +6,8 @@ public class Game {
 
     private String name;
     private List<GameMode> gameModes;
+    private boolean teamModes;
+    private boolean ffaModes;
 
     //Getters
     public String getName() {
@@ -16,6 +18,14 @@ public class Game {
         return gameModes;
     }
 
+    public boolean hasTeamModes() {
+        return teamModes;
+    }
+
+    public boolean hasFfaModes() {
+        return ffaModes;
+    }
+
     //Setters
     public void setName(String name) {
         this.name = name;
@@ -23,5 +33,13 @@ public class Game {
 
     public void setGameModes(List<GameMode> gameModes) {
         this.gameModes = gameModes;
+    }
+
+    public void setTeamModes(boolean teamModes) {
+        this.teamModes = teamModes;
+    }
+
+    public void setFfaModes(boolean ffaModes) {
+        this.ffaModes = ffaModes;
     }
 }

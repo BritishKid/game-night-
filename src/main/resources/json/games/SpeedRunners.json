@@ -1,5 +1,7 @@
 [{
   "name": "Speed Runners",
+  "teamModes": false,
+  "ffaModes": true,
   "gameModes": [
     {
       "name":"Speed Runners",

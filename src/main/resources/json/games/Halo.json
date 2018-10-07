@@ -1,28 +1,29 @@
 [{
   "name": "Halo: Combat Evolved",
-  "gameModes": [
+  "teamModes": true,
+  "ffaModes": true,
+  "gameModes": [{
+    "name": "Slayer",
+    "team": true,
+    "ffa": true
+  },
     {
-      "name":"Slayer",
-      "team": true,
-      "ffa": true
-    },
-    {
-      "name":"Capture the Flag",
+      "name": "Capture the Flag",
       "team": true,
       "ffa": false
     },
     {
-      "name":"Oddball",
+      "name": "Oddball",
       "team": true,
       "ffa": true
     },
     {
-      "name":"King of the Hill",
+      "name": "King of the Hill",
       "team": true,
       "ffa": true
     },
     {
-      "name":"Race",
+      "name": "Race",
       "team": false,
       "ffa": true
     }
@@ -30,39 +31,40 @@
 },
   {
     "name": "Halo 2",
-    "gameModes": [
+    "teamModes": true,
+    "ffaModes": true,
+    "gameModes": [{
+      "name": "Slayer",
+      "team": true,
+      "ffa": true
+    },
       {
-        "name":"Slayer",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"Capture the Flag",
+        "name": "Capture the Flag",
         "team": true,
         "ffa": false
       },
       {
-        "name":"Oddball",
+        "name": "Oddball",
         "team": true,
         "ffa": true
       },
       {
-        "name":"King of the Hill",
+        "name": "King of the Hill",
         "team": true,
         "ffa": true
       },
       {
-        "name":"Juggernaut",
+        "name": "Juggernaut",
         "team": false,
         "ffa": true
       },
       {
-        "name":"Territories",
+        "name": "Territories",
         "team": true,
         "ffa": true
       },
       {
-        "name":"Assault",
+        "name": "Assault",
         "team": true,
         "ffa": false
       }
@@ -70,49 +72,50 @@
   },
   {
     "name": "Halo 2 Remastered",
-    "gameMode": [
+    "teamModes": true,
+    "ffaModes": true,
+    "gameModes": [{
+      "name": "Slayer",
+      "team": true,
+      "ffa": true
+    },
       {
-        "name":"Slayer",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"Capture the Flag",
-        "team": true,
-        "ffa": false
-      },
-      {
-        "name":"Oddball",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"King of the Hill",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"Juggernaut",
-        "team": false,
-        "ffa": true
-      },
-      {
-        "name":"Territories",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"Assault",
+        "name": "Capture the Flag",
         "team": true,
         "ffa": false
       },
       {
-        "name":"Infection",
+        "name": "Oddball",
+        "team": true,
+        "ffa": true
+      },
+      {
+        "name": "King of the Hill",
+        "team": true,
+        "ffa": true
+      },
+      {
+        "name": "Juggernaut",
         "team": false,
         "ffa": true
       },
       {
-        "name":"Ricochet",
+        "name": "Territories",
+        "team": true,
+        "ffa": true
+      },
+      {
+        "name": "Assault",
+        "team": true,
+        "ffa": false
+      },
+      {
+        "name": "Infection",
+        "team": false,
+        "ffa": true
+      },
+      {
+        "name": "Ricochet",
         "team": true,
         "ffa": false
       }
@@ -120,49 +123,50 @@
   },
   {
     "name": "Halo 3",
-    "gameMode": [
+    "teamModes": true,
+    "ffaModes": true,
+    "gameModes": [{
+      "name": "Slayer",
+      "team": true,
+      "ffa": true
+    },
       {
-        "name":"Slayer",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"Capture the Flag",
-        "team": true,
-        "ffa": false
-      },
-      {
-        "name":"Oddball",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"King of the Hill",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"Juggernaut",
-        "team": false,
-        "ffa": true
-      },
-      {
-        "name":"Territories",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"Assault",
+        "name": "Capture the Flag",
         "team": true,
         "ffa": false
       },
       {
-        "name":"Infection",
+        "name": "Oddball",
+        "team": true,
+        "ffa": true
+      },
+      {
+        "name": "King of the Hill",
+        "team": true,
+        "ffa": true
+      },
+      {
+        "name": "Juggernaut",
         "team": false,
         "ffa": true
       },
       {
-        "name":"VIP",
+        "name": "Territories",
+        "team": true,
+        "ffa": true
+      },
+      {
+        "name": "Assault",
+        "team": true,
+        "ffa": false
+      },
+      {
+        "name": "Infection",
+        "team": false,
+        "ffa": true
+      },
+      {
+        "name": "VIP",
         "team": true,
         "ffa": false
       }
@@ -170,39 +174,40 @@
   },
   {
     "name": "Halo 4",
-    "gameMode": [
+    "teamModes": true,
+    "ffaModes": true,
+    "gameModes": [{
+      "name": "Slayer",
+      "team": true,
+      "ffa": true
+    },
       {
-        "name":"Slayer",
-        "team": true,
-        "ffa": true
-      },
-      {
-        "name":"Capture the Flag",
+        "name": "Capture the Flag",
         "team": true,
         "ffa": false
       },
       {
-        "name":"Oddball",
+        "name": "Oddball",
         "team": true,
         "ffa": true
       },
       {
-        "name":"King of the Hill",
+        "name": "King of the Hill",
         "team": true,
         "ffa": true
       },
       {
-        "name":"Flood",
+        "name": "Flood",
         "team": false,
         "ffa": true
       },
       {
-        "name":"Extraction",
+        "name": "Extraction",
         "team": true,
         "ffa": false
       },
       {
-        "name":"Regicide",
+        "name": "Regicide",
         "team": false,
         "ffa": true
       }

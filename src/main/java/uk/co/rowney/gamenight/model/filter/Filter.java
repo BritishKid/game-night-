@@ -1,10 +1,12 @@
-package uk.co.rowney.gamenight.model;
+package uk.co.rowney.gamenight.model.filter;
+
+import uk.co.rowney.gamenight.objects.Game;
 
 import java.util.List;
 
 public interface Filter {
 
-    List listWithTeam();
+    public List<?> listWithTeam(List<?> list);
 
-    List listWithFfa();
+    public List<?> listWithFfa(List<?> list);
 }

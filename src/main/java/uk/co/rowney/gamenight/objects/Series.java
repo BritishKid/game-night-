@@ -5,6 +5,8 @@ public class Series {
     private int id;
     private String name;
     private String fileName;
+    private boolean teamModes;
+    private boolean ffaModes;
 
     //getters
 
@@ -20,6 +22,14 @@ public class Series {
         return fileName;
     }
 
+    public boolean hasTeamModes() {
+        return teamModes;
+    }
+
+    public boolean hasFfaModes() {
+        return ffaModes;
+    }
+
     //setters
 
     public void setId(int id) {
@@ -32,5 +42,13 @@ public class Series {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+    public void setTeamModes(boolean teamModes) {
+        this.teamModes = teamModes;
+    }
+
+    public void setFfaModes(boolean ffaModes) {
+        this.ffaModes = ffaModes;
     }
 }

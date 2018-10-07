@@ -1,37 +1,46 @@
-[{
-  "name": "Worms Golf",
-  "gameModes": [
-    {
-      "name":"Golf",
-      "team": false,
-      "ffa": true
-    }
+[
+  {
+    "name": "Worms Golf",
+    "teamModes": false,
+    "ffaModes": true,
+    "gameModes": [
+      {
+        "name":"Golf",
+        "team": false,
+        "ffa": true
+      }
   ]},
   {
   "name": "Worms Armagedoon",
-  "gameModes": [
-    {
-      "name":"Battle",
-      "team": false,
-      "ffa": true
+    "teamModes": false,
+    "ffaModes": true,
+    "gameModes": [
+      {
+        "name":"Battle",
+        "team": false,
+        "ffa": true
+      }
+  ]},
+  {
+    "name": "Worms Ultimate Mayhem",
+    "teamModes": false,
+    "ffaModes": true,
+    "gameModes": [
+      {
+        "name":"Battle",
+        "team": false,
+        "ffa": true
     }
   ]},
   {
-  "name": "Worms Ultimate Mayhem",
-  "gameModes": [
-    {
-      "name":"Battle",
-      "team": false,
-      "ffa": true
-    }
-  ]},
-  {
-  "name": "Worms Battleground",
-  "gameModes": [
-    {
-      "name":"Battle",
-      "team": false,
-      "ffa": true
+    "name": "Worms Battleground",
+    "teamModes": false,
+    "ffaModes": true,
+    "gameModes": [
+      {
+        "name":"Battle",
+        "team": false,
+        "ffa": true
     }
   ]}
 ]

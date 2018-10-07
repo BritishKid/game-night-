@@ -1,5 +1,7 @@
 [{
   "name": "Forza",
+  "teamModes": false,
+  "ffaModes": true,
   "gameModes": [
     {
       "name":"Race",

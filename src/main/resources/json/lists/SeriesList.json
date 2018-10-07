@@ -2,47 +2,65 @@
   {
     "id": 1,
     "name": "Halo",
-    "fileName": "Halo"
+    "fileName": "Halo",
+    "teamModes": true,
+    "ffaModes": true
   },
   {
     "id": 2,
     "name": "Pokémon",
-    "fileName": "Pokémon"
+    "fileName": "Pokémon",
+    "teamModes": false,
+    "ffaModes": true
   },
   {
     "id": 3,
     "name": "Worms",
-    "fileName": "Worms"
+    "fileName": "Worms",
+    "teamModes": false,
+    "ffaModes": true
   },
   {
     "id": 4,
     "name": "Warrior Orochi Ultimate 3",
-    "fileName": "WarriorOrochiUltimate"
+    "fileName": "WarriorOrochiUltimate",
+    "teamModes": false,
+    "ffaModes": true
   },
   {
     "id": 5,
     "name": "Speed Runners",
-    "fileName": "SpeedRunners"
+    "fileName": "SpeedRunners",
+    "teamModes": false,
+    "ffaModes": true
   },
   {
     "id": 6,
     "name": "#IDARB",
-    "fileName": "IDARB"
+    "fileName": "IDARB",
+    "teamModes": true,
+    "ffaModes": false
   },
   {
     "id": 7,
     "name": "Doom",
-    "fileName": "Doom"
+    "fileName": "Doom",
+    "teamModes": false,
+    "ffaModes": true
   },
   {
     "id": 8,
     "name": "Forza",
-    "fileName": "Forza"
+    "fileName": "Forza",
+    "teamModes": false,
+    "ffaModes": true
   },
   {
     "id": 9,
     "name": "Battleblock Theatre",
-    "fileName": "BattleblockTheatre"
+    "fileName": "BattleblockTheatre",
+    "teamModes": true,
+    "ffaModes": true
   }
 ]
 
