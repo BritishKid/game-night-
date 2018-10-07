@@ -1,16 +1,96 @@
 [{
   "name": "Pokémon Generation 7",
   "gameModes": [
-    {
-      "name":"Ubers",
-      "team": false,
-      "ffa": true
-    },
-    {
-      "name":"Over Used",
-      "team": false,
-      "ffa": true
-    }
-    //todo finish the data
-  ]
-}]
+      {
+        "name":"Singles",
+        "team": false,
+        "ffa": true
+      },
+      {
+        "name":"Doubles",
+        "team": false,
+        "ffa": true
+      }
+    ]
+  },
+  {
+    "name": "Pokémon Generation 6",
+    "gameModes": [
+      {
+        "name":"Singles",
+        "team": false,
+        "ffa": true
+      },
+      {
+        "name":"Doubles",
+        "team": false,
+        "ffa": true
+      }
+    ]
+  },
+  {
+    "name": "Pokémon Generation 5",
+    "gameModes": [
+      {
+        "name":"Singles",
+        "team": false,
+        "ffa": true
+      },
+      {
+        "name":"Doubles",
+        "team": false,
+        "ffa": true
+      }
+    ]
+  },
+  {
+    "name": "Pokémon Generation 4",
+    "gameModes": [
+      {
+        "name":"Singles",
+        "team": false,
+        "ffa": true
+      },
+      {
+        "name":"Doubles",
+        "team": false,
+        "ffa": true
+      }
+    ]
+  },
+  {
+    "name": "Pokémon Generation 3",
+    "gameModes": [
+      {
+        "name":"Singles",
+        "team": false,
+        "ffa": true
+      },
+      {
+        "name":"Doubles",
+        "team": false,
+        "ffa": true
+      }
+    ]
+  },
+  {
+    "name": "Pokémon Generation 2",
+    "gameModes": [
+      {
+        "name":"Singles",
+        "team": false,
+        "ffa": true
+      }
+    ]
+  },
+  {
+    "name": "Pokémon Generation 1",
+    "gameModes": [
+      {
+        "name":"Singles",
+        "team": false,
+        "ffa": true
+      }
+    ]
+  }
+]

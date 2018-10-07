@@ -1,6 +1,6 @@
 package uk.co.rowney.gamenight.objects;
 
-public class GameModes {
+public class GameMode {
 
     private String name;
     private boolean team = false;

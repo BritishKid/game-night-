@@ -5,14 +5,14 @@ import java.util.List;
 public class Game {
 
     private String name;
-    private List<GameModes> gameModes;
+    private List<GameMode> gameModes;
 
     //Getters
     public String getName() {
         return name;
     }
 
-    public List<GameModes> getGameModes() {
+    public List<GameMode> getGameModes() {
         return gameModes;
     }
 
@@ -21,7 +21,7 @@ public class Game {
         this.name = name;
     }
 
-    public void setGameModes(List<GameModes> gameModes) {
+    public void setGameModes(List<GameMode> gameModes) {
         this.gameModes = gameModes;
     }
 }
