@@ -7,8 +7,9 @@ import uk.co.rowney.gamenight.objects.Series;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Randomise {
+public class CommonRandomiser {
 
     private JsonParser jsonParser = new JsonParser();
 
@@ -30,5 +31,40 @@ public class Randomise {
     public GameMode randomGameMode(Game chosenGame) {
         List<GameMode> gameModes = chosenGame.getGameModes();
         return gameModes.get(getRandomForList(gameModes.size()));
+    }
+
+    public GameMode randomTeamGameMode(Game chosenGame) {
+
+
+
+        List<GameMode> gameModes = new ArrayList<>();
+        List<GameMode> filteredList = new ArrayList<>();
+        boolean validGame = false;
+
+
+
+        while(!validGame) {
+            gameModes = chosenGame.getGameModes();
+            filteredList = gameModes.stream()
+                    .filter(GameMode::isTeam)
+                    .collect(Collectors.toList());
+            if (filteredList.size() != 0){
+                validGame = true;
+            }
+        }
+        return filteredList.get(getRandomForList(filteredList.size()));
+    }
+
+    public GameMode randomSoloGameMode(Game chosenGame) {
+        List<GameMode> gameModes = chosenGame.getGameModes();
+        List<GameMode> filteredList = gameModes.stream()
+                .filter(GameMode::isFfa)
+                .collect(Collectors.toList());
+
+        return filteredList.get(getRandomForList(filteredList.size()));
+    }
+
+    public Game randomTeamGame() {
+        return null;
     }
 }
