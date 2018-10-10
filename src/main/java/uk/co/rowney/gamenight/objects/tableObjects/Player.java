@@ -1,5 +1,7 @@
 package uk.co.rowney.gamenight.objects.tableObjects;
 
+import static java.lang.String.format;
+
 public class Player {
 
     private int id;
@@ -33,4 +35,8 @@ public class Player {
         this.score = score;
     }
 
+    @Override
+    public String toString(){
+        return format("ID: %s, Name: %s, Score: %s", this.id, this.name, this.score);
+    }
 }
