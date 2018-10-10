@@ -1,11 +1,9 @@
-package uk.co.rowney.gamenight.model.Randomise;
+package uk.co.rowney.gamenight.model.randomise;
 
 import uk.co.rowney.gamenight.model.filter.Filter;
 import uk.co.rowney.gamenight.model.filter.GameModeFilter;
-import uk.co.rowney.gamenight.model.filter.SeriesFilter;
-import uk.co.rowney.gamenight.objects.Game;
-import uk.co.rowney.gamenight.objects.GameMode;
-import uk.co.rowney.gamenight.objects.Series;
+import uk.co.rowney.gamenight.objects.gameObjects.Game;
+import uk.co.rowney.gamenight.objects.gameObjects.GameMode;
 
 import java.util.List;
 

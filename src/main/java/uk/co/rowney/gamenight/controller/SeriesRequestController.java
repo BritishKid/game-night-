@@ -2,8 +2,8 @@ package uk.co.rowney.gamenight.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import uk.co.rowney.gamenight.model.Randomise.SeriesRandomiser;
-import uk.co.rowney.gamenight.objects.Series;
+import uk.co.rowney.gamenight.model.randomise.SeriesRandomiser;
+import uk.co.rowney.gamenight.objects.gameObjects.Series;
 
 import java.io.FileNotFoundException;
 
@@ -35,4 +35,5 @@ public class SeriesRequestController {
 
         return "Random FFA series selected: " + chosenSeries.getName();
     }
+
 }

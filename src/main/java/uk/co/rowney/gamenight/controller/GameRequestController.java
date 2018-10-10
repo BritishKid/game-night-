@@ -5,10 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import uk.co.rowney.gamenight.config.ApiClientConfiguration;
-import uk.co.rowney.gamenight.model.Randomise.GameRandomiser;
-import uk.co.rowney.gamenight.model.Randomise.SeriesRandomiser;
-import uk.co.rowney.gamenight.objects.Game;
-import uk.co.rowney.gamenight.objects.Series;
+import uk.co.rowney.gamenight.model.randomise.GameRandomiser;
+import uk.co.rowney.gamenight.model.randomise.SeriesRandomiser;
+import uk.co.rowney.gamenight.objects.gameObjects.Game;
+import uk.co.rowney.gamenight.objects.gameObjects.Series;
 
 import java.io.FileNotFoundException;
 

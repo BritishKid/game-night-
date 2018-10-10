@@ -1,25 +1,21 @@
-package uk.co.rowney.gamenight.objects;
+package uk.co.rowney.gamenight.objects.gameObjects;
 
-public class Series {
+import java.util.List;
 
-    private int id;
+public class Game {
+
     private String name;
-    private String fileName;
+    private List<GameMode> gameModes;
     private boolean teamModes;
     private boolean ffaModes;
 
-    //getters
-
-    public int getId() {
-        return id;
-    }
-
+    //Getters
     public String getName() {
         return name;
     }
 
-    public String getFileName() {
-        return fileName;
+    public List<GameMode> getGameModes() {
+        return gameModes;
     }
 
     public boolean hasTeamModes() {
@@ -30,18 +26,13 @@ public class Series {
         return ffaModes;
     }
 
-    //setters
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    //Setters
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+    public void setGameModes(List<GameMode> gameModes) {
+        this.gameModes = gameModes;
     }
 
     public void setTeamModes(boolean teamModes) {

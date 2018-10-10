@@ -1,10 +1,6 @@
-package uk.co.rowney.gamenight.model.Randomise;
+package uk.co.rowney.gamenight.model.randomise;
 
 import uk.co.rowney.gamenight.model.JsonParser;
-import uk.co.rowney.gamenight.objects.Game;
-import uk.co.rowney.gamenight.objects.GameMode;
-
-import java.util.List;
 
 public class CommonRandomiser {
 

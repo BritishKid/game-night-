@@ -1,4 +1,4 @@
-package uk.co.rowney.gamenight.objects;
+package uk.co.rowney.gamenight.objects.gameObjects;
 
 public class GameMode {
 

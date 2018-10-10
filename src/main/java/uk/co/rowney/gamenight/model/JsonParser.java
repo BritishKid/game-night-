@@ -3,8 +3,8 @@ package uk.co.rowney.gamenight.model;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
-import uk.co.rowney.gamenight.objects.Game;
-import uk.co.rowney.gamenight.objects.Series;
+import uk.co.rowney.gamenight.objects.gameObjects.Game;
+import uk.co.rowney.gamenight.objects.gameObjects.Series;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

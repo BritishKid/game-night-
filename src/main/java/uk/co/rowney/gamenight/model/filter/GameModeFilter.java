@@ -1,8 +1,6 @@
 package uk.co.rowney.gamenight.model.filter;
 
-import uk.co.rowney.gamenight.objects.Game;
-import uk.co.rowney.gamenight.objects.GameMode;
-import uk.co.rowney.gamenight.objects.Series;
+import uk.co.rowney.gamenight.objects.gameObjects.GameMode;
 
 import java.util.ArrayList;
 import java.util.List;
