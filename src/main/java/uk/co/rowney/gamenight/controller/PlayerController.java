@@ -24,14 +24,12 @@ public class PlayerController {
 
     @RequestMapping(path="/player/get/id={playerId}")
     public Player getPlayerFromId(@PathVariable("playerId") int playerId) throws SQLException {
-        Player player = playerDao.getPlayerFromId(playerId);
-        return player;
+        return playerDao.getPlayerFromId(playerId);
     }
 
     @RequestMapping(path="/player/get/allplayers")
     public List<Player> getAllPlayers() throws SQLException {
-        List<Player> playerList = playerDao.getAllPlayers();
-        return playerList;
+        return playerDao.getAllPlayers();
     }
 
 }
