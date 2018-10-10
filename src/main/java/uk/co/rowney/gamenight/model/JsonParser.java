@@ -9,7 +9,10 @@ import uk.co.rowney.gamenight.objects.gameObjects.Series;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
+import java.net.URL;
 import java.util.List;
+
+import static java.lang.String.format;
 
 public class JsonParser {
 
@@ -18,9 +21,8 @@ public class JsonParser {
 
     public List<Series> getSeriesList() throws FileNotFoundException {
         Type REVIEW_TYPE = new TypeToken<List<Series>>() {}.getType();
-        String filename =
-                "C:\\Users\\Dell\\Documents\\Repo\\game-night\\src\\main\\resources\\json\\lists\\SeriesList.json";
-        JsonReader reader = new JsonReader(new FileReader(filename));
+        URL url = getClass().getResource("/json/lists/SeriesList.json");
+        JsonReader reader = new JsonReader(new FileReader(url.getPath()));
 
         return gson.fromJson(reader, REVIEW_TYPE);
     }
@@ -28,9 +30,8 @@ public class JsonParser {
 
     public List<Game> getGameList(String fileName) throws FileNotFoundException {
         Type REVIEW_TYPE = new TypeToken<List<Game>>() {}.getType();
-        String filename =
-                "C:\\Users\\Dell\\Documents\\Repo\\game-night\\src\\main\\resources\\json\\games\\" + fileName + ".json";
-        JsonReader reader = new JsonReader(new FileReader(filename));
+        URL url = getClass().getResource(format("/json/games/%s.json", fileName));
+        JsonReader reader = new JsonReader(new FileReader(url.getPath()));
 
         return gson.fromJson(reader, REVIEW_TYPE);
     }
