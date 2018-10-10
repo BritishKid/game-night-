@@ -17,7 +17,6 @@ import static java.lang.String.format;
 public class JsonParser {
 
     private Gson gson = new Gson();
-    private List<Game> gameList;
 
     public List<Series> getSeriesList() throws FileNotFoundException {
         Type REVIEW_TYPE = new TypeToken<List<Series>>() {}.getType();
