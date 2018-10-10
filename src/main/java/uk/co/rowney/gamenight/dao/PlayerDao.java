@@ -48,6 +48,15 @@ public class PlayerDao {
         return playerList;
     }
 
+    public void updatePlayersScores(String[] playerIds) throws SQLException {
+        Statement statement = createConnection();
+
+        for (String playerId: playerIds) {
+            String sql = format("UPDATE player SET score = score + 3 WHERE id = %s", playerId);
+            statement.executeUpdate(sql);
+        }
+    }
+
     private Statement createConnection() throws SQLException {
         Connection connection = DriverManager.getConnection("jdbc:h2:mem:testdb", "sa", "");
         return connection.createStatement();
