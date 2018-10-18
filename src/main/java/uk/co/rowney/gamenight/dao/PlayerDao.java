@@ -12,14 +12,19 @@ import static java.lang.String.format;
 @Repository
 public class PlayerDao {
 
-    public void addNewPlayer(String playerName) throws SQLException {
-        Statement statement = createConnection();
-        String sql = "INSERT INTO player (name, score) VALUES ('" + playerName + "', 1000)";
-        statement.executeUpdate(sql);
+    private Statement statement;
+
+    public void addNewPlayer(String[] playerNames) throws SQLException {
+        statement = createConnection();
+
+        for (String playerName: playerNames) {
+            String sql = "INSERT INTO player (name, score) VALUES ('" + playerName + "', 1000)";
+            statement.executeUpdate(sql);
+        }
     }
 
     public Player getPlayerFromId(int id) throws SQLException {
-        Statement statement = createConnection();
+        statement = createConnection();
         String sql = format("SELECT * FROM player WHERE id = %s", id);
         ResultSet resultSet = statement.executeQuery(sql);
 
@@ -34,8 +39,8 @@ public class PlayerDao {
     }
 
     public List<Player> getAllPlayers() throws SQLException {
-        Statement statement = createConnection();
-        String sql = format("SELECT * FROM player");
+        statement = createConnection();
+        String sql = format("SELECT * FROM player ORDER BY score DESC");
         ResultSet resultSet = statement.executeQuery(sql);
 
         List<Player> playerList = new ArrayList<>();
@@ -60,7 +65,7 @@ public class PlayerDao {
 //    }
 
     public List<Player> getMultiplePlayersFromId(String[] idList) throws SQLException {
-        Statement statement = createConnection();
+        statement = createConnection();
         List<Player> playerList = new ArrayList<>();
 
         for (String id : idList) {
@@ -79,10 +84,11 @@ public class PlayerDao {
     }
 
     public void updatePlayers(List<Player> updatedList) throws SQLException {
-        Statement statement = createConnection();
+        statement = createConnection();
 
         for (Player player : updatedList) {
             String sql = format("UPDATE player SET score = %s WHERE id = %s", player.getScore(), player.getId());
+            statement.executeUpdate(sql);
         }
     }
 

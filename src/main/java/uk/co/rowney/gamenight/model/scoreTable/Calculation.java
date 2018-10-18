@@ -9,31 +9,57 @@ public class Calculation {
     public List<Player> scoreCalculation(List<Player> winnerList, List<Player> loserList) {
         List<Player> updatedList = new ArrayList<>();
 
-        int winnerAverage = getAverageScore(winnerList);
-        int loserAverage = getAverageScore(loserList);
 
-        int winnerChange = getRatingChange(winnerAverage, loserAverage);
+        float winnerAverage = getAverageScore(winnerList);
+        float loserAverage = getAverageScore(loserList);
+
+        float probabilityWinner = Probability(winnerAverage, loserAverage);
+        float probabilityLoser = Probability(loserAverage, winnerAverage);
+
+//        EloRating(winnerAverage, loserAverage);
+        float winnerChange = WinnerEloRatingChange(winnerAverage, probabilityWinner);
         for (Player player : winnerList) {
-            player.setScore(player.getScore() + winnerChange);
+            player.setScore((int) (player.getScore() + winnerChange));
             updatedList.add(player);
         }
 
-        int loserChange = getRatingChange(loserAverage, winnerAverage);
+        float loserChange = LoserEloRatingChange(loserAverage, probabilityLoser);
         for (Player player: loserList) {
-            player.setScore(player.getScore() + loserChange);
+            player.setScore((int) (player.getScore() - loserChange));
             updatedList.add(player);
         }
 
         return updatedList;
     }
 
-    private int getRatingChange(int winnerAverage, int loserAverage) {
-        int newWinnerRating = winnerAverage + (15)*(1+(loserAverage-winnerAverage/400));
-        return Math.abs(newWinnerRating - winnerAverage);
+//    private double getRatingChange(float playerScore, float opponentScore) {
+//        double newWinnerRating = playerScore + (15)*(1+(opponentScore-playerScore));
+//        return Math.abs(newWinnerRating - playerScore);
+//    }
+
+    private float Probability(float rating1,float rating2) {
+        return 1.0f * 1.0f / (1 + 1.0f * (float)(Math.pow(10, 1.0f * (rating1 - rating2) / 400)));
     }
 
-    private int getAverageScore(List<Player> playerList) {
-        int totalScore = 0;
+    private float WinnerEloRatingChange(float winnerAverage, float probabilityWinner){
+
+        float newWinnerAverage = winnerAverage + 30 * (1 - probabilityWinner);
+        return Math.abs(newWinnerAverage-winnerAverage);
+
+
+//        System.out.print("Ra = " + (Math.round(
+//                winnerAverage * 1000000.0) / 1000000.0)
+//                + " Rb = " + Math.round(loserAverage
+//                * 1000000.0) / 1000000.0);
+    }
+
+    private float LoserEloRatingChange(float loserAverage, float probabilityLoser) {
+        float newLoserAverage = loserAverage + 30 * (0 - probabilityLoser);
+        return Math.abs(newLoserAverage - loserAverage);
+    }
+
+    private float getAverageScore(List<Player> playerList) {
+        float totalScore = 0;
         int count = 0;
         for (Player player: playerList) {
             totalScore = totalScore + player.getScore();

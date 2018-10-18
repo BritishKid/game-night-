@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <head>
+        <title>Game Night</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" />
+    </head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <h1><a th:href="@{/}">Game Night <span></span></a></h1>
+</header>
+
+<section id="banner">
+    <div class="inner">
+        <header>
+            <h1>New players</h1>
+            <h2>Separate each name with a comma ','.</h2>
+            <form action="#" th:action="@{/new/players}" th:object="${player}" method="post">
+                <p>Message: <input type="text" th:field="*{name}" /></p>
+                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+            </form>
+        </header>
+        <a href="#main" class="button big alt scrolly" th:href="@{/new/players}">Add player</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/player/get/allplayers}">See players</a>
+    </div>
+</section>
+</body>
+</html>

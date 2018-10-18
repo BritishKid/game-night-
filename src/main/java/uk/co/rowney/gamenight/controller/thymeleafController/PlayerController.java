@@ -2,8 +2,8 @@ package uk.co.rowney.gamenight.controller.thymeleafController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import uk.co.rowney.gamenight.dao.PlayerDao;
 import uk.co.rowney.gamenight.model.scoreTable.Calculation;
 import uk.co.rowney.gamenight.objects.tableObjects.Player;
@@ -49,5 +49,24 @@ public class PlayerController {
         playerDao.updatePlayers(updatedList);
 
         return "updated";
+    }
+
+    @RequestMapping(path="/player/get/allplayers")
+    public String getAllPlayers(Model model) throws SQLException {
+        model.addAttribute("playerlist", playerDao.getAllPlayers());
+        return "players";
+    }
+
+    @GetMapping("/new/players")
+    public String greetingForm(Model model) {
+        model.addAttribute("player", new Player());
+        return "newplayers";
+    }
+
+    @PostMapping("/new/players")
+    public String greetingSubmit(@ModelAttribute Player player) throws SQLException {
+        String[] playerNames = player.getName().split(",");
+        playerDao.addNewPlayer(playerNames);
+        return "result";
     }
 }
