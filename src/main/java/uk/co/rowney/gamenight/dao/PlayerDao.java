@@ -1,5 +1,6 @@
 package uk.co.rowney.gamenight.dao;
 
+import org.springframework.stereotype.Repository;
 import uk.co.rowney.gamenight.objects.tableObjects.Player;
 
 import java.sql.*;
@@ -8,11 +9,12 @@ import java.util.List;
 
 import static java.lang.String.format;
 
+@Repository
 public class PlayerDao {
 
     public void addNewPlayer(String playerName) throws SQLException {
         Statement statement = createConnection();
-        String sql = "INSERT INTO player (name, score) VALUES ('" + playerName + "', 0)";
+        String sql = "INSERT INTO player (name, score) VALUES ('" + playerName + "', 1000)";
         statement.executeUpdate(sql);
     }
 
@@ -48,12 +50,39 @@ public class PlayerDao {
         return playerList;
     }
 
-    public void updatePlayersScores(String[] playerIds) throws SQLException {
+//    public void updatePlayersScores(String[] playerIds) throws SQLException {
+//        Statement statement = createConnection();
+//
+//        for (String playerId: playerIds) {
+//            String sql = format("UPDATE player SET score = score + 3 WHERE id = %s", playerId);
+//            statement.executeUpdate(sql);
+//        }
+//    }
+
+    public List<Player> getMultiplePlayersFromId(String[] idList) throws SQLException {
+        Statement statement = createConnection();
+        List<Player> playerList = new ArrayList<>();
+
+        for (String id : idList) {
+            String sql = format("SELECT * FROM player WHERE id = %s", id);
+            ResultSet resultSet = statement.executeQuery(sql);
+            while(resultSet.next()){
+                Player player = new Player();
+                player.setId(resultSet.getInt("id"));
+                player.setName(resultSet.getString("name"));
+                player.setScore(resultSet.getInt("score"));
+                playerList.add(player);
+            }
+        }
+
+        return playerList;
+    }
+
+    public void updatePlayers(List<Player> updatedList) throws SQLException {
         Statement statement = createConnection();
 
-        for (String playerId: playerIds) {
-            String sql = format("UPDATE player SET score = score + 3 WHERE id = %s", playerId);
-            statement.executeUpdate(sql);
+        for (Player player : updatedList) {
+            String sql = format("UPDATE player SET score = %s WHERE id = %s", player.getScore(), player.getId());
         }
     }
 
